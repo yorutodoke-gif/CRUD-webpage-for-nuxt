@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --dir CRUD-nuxt dev",
+    "build": "pnpm --dir CRUD-nuxt build",
+    "db:generate": "pnpm --dir CRUD-nuxt prisma generate"
+  }
+}
