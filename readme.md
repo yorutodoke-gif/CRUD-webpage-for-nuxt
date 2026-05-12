@@ -18,6 +18,12 @@ DBはマイグレーション
 
 ## パッケージメモ
 
+### pnpmはインストール時にscriptは止めてくれる安心設計！だけどprismaやnuxtでは許可しないといけない
+
+```bash
+pnpm approve-builds
+```
+
 ### dependencies
 
 絶対に必要なもの
@@ -49,6 +55,22 @@ pnpm add -D prisma tsx @types/node
 
 ### Nuxt
 
+├── app
+│   └── app.vue
+├── generated/ #Nuxt(server) が使う TypeScript client、実際使うのはserver/apiやserver/utils/db.ts側だからnuxtに配置
+├── public
+│   ├── favicon.ico
+│   └── robots.txt
+├── server
+│   └── utils
+│       └── db.ts
+├── nuxt.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+└── tsconfig.json
+
 ### DB
 
 ```directory
@@ -59,7 +81,10 @@ DB.env  #データベースまでのURL
 
 DB
 └── prisma
-    ├── generated       #DB設計図
     ├── migrations      #DB変更履歴
     └── schema.prisma   #Prisma自動生成コード
 ```
+
+### pnpm-workspace.yaml
+
+rootでもpnpm操作ができる用にしたもの、package.jsonにはCRUD-nuxtのpackage.jsonを読み込むように設定している

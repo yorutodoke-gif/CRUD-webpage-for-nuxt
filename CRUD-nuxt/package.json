@@ -1,0 +1,26 @@
+{
+  "name": "CRUD-nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "nuxt": "^4.4.5",
+    "pg": "^8.20.0",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "prisma": "^7.8.0",
+    "tsx": "^4.21.0"
+  }
+}
